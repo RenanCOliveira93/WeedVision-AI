@@ -1,0 +1,138 @@
+[
+ {
+  "id": "yolo11n",
+  "name": "YOLO11n (Ultralytics)",
+  "task": "detecção (caixas)",
+  "format": "pytorch+onnx",
+  "weights": "runs/yolo11n_weed/weights/best.pt",
+  "onnx": "models/onnx/yolo11n_weed.onnx",
+  "classes": [
+   "weed"
+  ],
+  "license": "AGPL-3.0 (pesos e código Ultralytics)",
+  "trained_on": "sudars_weed/train (CC BY 4.0)",
+  "domain_note": "Treinado em Sudars 2020 (plantas individuais; vasos em estufa e campo aberto); não validado para café brasileiro; falhou zero-shot no milho (Nigéria).",
+  "metrics": {
+   "test_origin": {
+    "map50": 0.2907188355193634,
+    "map50_95": 0.12745349332330613,
+    "precision": 0.4592964824120603,
+    "recall": 0.3261955745895789
+   },
+   "val": {
+    "map50": 0.8212240551728908,
+    "map50_95": 0.5350285780064726,
+    "precision": 0.7285714285714285,
+    "recall": 0.8145519077196096
+   },
+   "test": {
+    "map50": 0.7245909264356073,
+    "map50_95": 0.487647975529372,
+    "precision": 0.6525911708253359,
+    "recall": 0.7522123893805309
+   }
+  }
+ },
+ {
+  "id": "yolo11s",
+  "name": "YOLO11s (Ultralytics)",
+  "task": "detecção (caixas)",
+  "format": "pytorch+onnx",
+  "weights": "runs/yolo11s_weed/weights/best.pt",
+  "onnx": "models/onnx/yolo11s_weed.onnx",
+  "classes": [
+   "weed"
+  ],
+  "license": "AGPL-3.0 (pesos e código Ultralytics)",
+  "trained_on": "sudars_weed/train (CC BY 4.0)",
+  "domain_note": "Treinado em Sudars 2020 (plantas individuais; vasos em estufa e campo aberto); não validado para café brasileiro; falhou zero-shot no milho (Nigéria).",
+  "metrics": {
+   "test": {
+    "map50": 0.7267653796860734,
+    "map50_95": 0.5117202207855628,
+    "precision": 0.6923076923076923,
+    "recall": 0.7168141592920354
+   },
+   "test_origin": {
+    "map50": 0.2165188670728496,
+    "map50_95": 0.09154332623966459,
+    "precision": 0.38253382533825336,
+    "recall": 0.22198429693076374
+   },
+   "val": {
+    "map50": 0.8102075830625983,
+    "map50_95": 0.5489600595706713,
+    "precision": 0.7627737226277372,
+    "recall": 0.7417923691215617
+   }
+  }
+ },
+ {
+  "id": "frcnn_mnv3",
+  "name": "Faster R-CNN MobileNetV3 v1 (lr 0,01, sem warmup)",
+  "task": "detecção (caixas)",
+  "format": "pytorch",
+  "weights": "runs/frcnn_mnv3_weed/model.pt",
+  "onnx": null,
+  "classes": [
+   "weed"
+  ],
+  "license": "BSD-3-Clause (torchvision); pesos COCO iniciais",
+  "trained_on": "sudars_weed/train (CC BY 4.0)",
+  "domain_note": "Treinado em Sudars 2020 (plantas individuais; vasos em estufa e campo aberto); não validado para café brasileiro; falhou zero-shot no milho (Nigéria).",
+  "metrics": {
+   "val": {
+    "map50": 0.7091763531955878,
+    "map50_95": 0.32328832115010553,
+    "precision": 0.6121428571428571,
+    "recall": 0.7604259094942325
+   },
+   "test": {
+    "map50": 0.6121748786360429,
+    "map50_95": 0.3256744398007796,
+    "precision": 0.5430579964850615,
+    "recall": 0.6836283185840708
+   },
+   "test_origin": {
+    "map50": 0.18619280842271566,
+    "map50_95": 0.07018956170943819,
+    "precision": 0.34933605720122574,
+    "recall": 0.24411134903640258
+   }
+  }
+ },
+ {
+  "id": "frcnn_mnv3_v2",
+  "name": "Faster R-CNN MobileNetV3 v2 (lr 0,005, warmup)",
+  "task": "detecção (caixas)",
+  "format": "pytorch",
+  "weights": "runs/frcnn_mnv3_v2_weed/model.pt",
+  "onnx": null,
+  "classes": [
+   "weed"
+  ],
+  "license": "BSD-3-Clause (torchvision); pesos COCO iniciais",
+  "trained_on": "sudars_weed/train (CC BY 4.0)",
+  "domain_note": "Treinado em Sudars 2020 (plantas individuais; vasos em estufa e campo aberto); não validado para café brasileiro; falhou zero-shot no milho (Nigéria).",
+  "metrics": {
+   "val": {
+    "map50": 0.6886049543269022,
+    "map50_95": 0.31213055430405384,
+    "precision": 0.5814275814275814,
+    "recall": 0.7444543034605147
+   },
+   "test": {
+    "map50": 0.6047242766591485,
+    "map50_95": 0.3172063519429996,
+    "precision": 0.5249569707401033,
+    "recall": 0.6747787610619469
+   },
+   "test_origin": {
+    "map50": 0.1786129863578074,
+    "map50_95": 0.06256892893439492,
+    "precision": 0.34307992202729043,
+    "recall": 0.251249107780157
+   }
+  }
+ }
+]

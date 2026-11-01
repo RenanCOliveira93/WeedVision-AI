@@ -1,0 +1,17 @@
+.venv/
+data/
+runs/*
+!runs/*.json
+!runs/eval/
+!runs/deepweeds/
+runs/deepweeds/*
+!runs/deepweeds/*.json
+models/pretrained/
+node_modules/
+frontend/dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+mlruns/
+mlflow.db
+.env

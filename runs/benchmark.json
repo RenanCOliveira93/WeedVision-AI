@@ -1,0 +1,129 @@
+{
+ "hardware": "Apple M4 Max, 14 núcleos, macOS-15.8.2-arm64-arm-64bit",
+ "nota": "Batch 1, 100 imagens 1280×720, 10 de aquecimento; latência ponta a ponta (pré+infer+pós) sem E/S de disco. RSS = pico do processo: inclui bibliotecas, o modelo E ≈ 300 MB de imagens de teste pré-carregadas (110 × 1280×720×3) — serve para comparar configurações entre si, NÃO é o consumo de borda. Uma execução por configuração; sem repetição entre dias/temperatura. O modelo 'frcnn_mnv3' usa os pesos v1; a latência independe dos pesos (mesma arquitetura).",
+ "resultados": [
+  {
+   "nome": "yolo11n · onnxruntime CPU",
+   "mean_ms": 13.07023626006412,
+   "p50_ms": 12.953896000908571,
+   "p95_ms": 14.079743147885893,
+   "fps": 76.50971107962926,
+   "rss_mb": 654.15625,
+   "n": 100,
+   "providers": [
+    "CPUExecutionProvider"
+   ]
+  },
+  {
+   "nome": "yolo11s · onnxruntime CPU",
+   "mean_ms": 25.721766279930307,
+   "p50_ms": 23.881853998318547,
+   "p95_ms": 34.05442564871919,
+   "fps": 38.87757897793594,
+   "rss_mb": 836.65625,
+   "n": 100,
+   "providers": [
+    "CPUExecutionProvider"
+   ]
+  },
+  {
+   "nome": "yolo11n · onnxruntime CoreML",
+   "mean_ms": 6.649586989660747,
+   "p50_ms": 6.662457999482285,
+   "p95_ms": 7.081408300291514,
+   "fps": 150.38527980081642,
+   "rss_mb": 628.171875,
+   "n": 100,
+   "providers": [
+    "CoreMLExecutionProvider",
+    "CPUExecutionProvider"
+   ]
+  },
+  {
+   "nome": "yolo11s · onnxruntime CoreML",
+   "mean_ms": 10.585120409959927,
+   "p50_ms": 10.614395998345572,
+   "p95_ms": 11.241467000581906,
+   "fps": 94.4722366180231,
+   "rss_mb": 812.40625,
+   "n": 100,
+   "providers": [
+    "CoreMLExecutionProvider",
+    "CPUExecutionProvider"
+   ]
+  },
+  {
+   "nome": "yolo11n · PyTorch CPU",
+   "mean_ms": 21.589304149856616,
+   "p50_ms": 21.58635449995927,
+   "p95_ms": 22.731214901796193,
+   "fps": 46.31923257270158,
+   "rss_mb": 826.71875,
+   "n": 100,
+   "providers": [
+    "torch:cpu"
+   ]
+  },
+  {
+   "nome": "yolo11s · PyTorch CPU",
+   "mean_ms": 35.049253690194746,
+   "p50_ms": 36.00695849854674,
+   "p95_ms": 37.06796730093629,
+   "fps": 28.53127797924429,
+   "rss_mb": 1002.203125,
+   "n": 100,
+   "providers": [
+    "torch:cpu"
+   ]
+  },
+  {
+   "nome": "yolo11n · PyTorch MPS",
+   "mean_ms": 8.000482479837956,
+   "p50_ms": 7.539979498687899,
+   "p95_ms": 10.59966249995341,
+   "fps": 124.99246170716623,
+   "rss_mb": 886.171875,
+   "n": 100,
+   "providers": [
+    "torch:mps"
+   ]
+  },
+  {
+   "nome": "yolo11s · PyTorch MPS",
+   "mean_ms": 9.47732413005724,
+   "p50_ms": 9.477166498982115,
+   "p95_ms": 11.062028499145526,
+   "fps": 105.51501523816303,
+   "rss_mb": 947.03125,
+   "n": 100,
+   "providers": [
+    "torch:mps"
+   ]
+  },
+  {
+   "nome": "frcnn_mnv3 · PyTorch CPU",
+   "mean_ms": 184.7532470501028,
+   "p50_ms": 183.94137500035868,
+   "p95_ms": 197.51742019852827,
+   "fps": 5.412624762848213,
+   "rss_mb": 1256.625,
+   "n": 100,
+   "providers": [
+    "torch:cpu"
+   ]
+  },
+  {
+   "nome": "frcnn_mnv3 · PyTorch MPS",
+   "mean_ms": 16.724610410055902,
+   "p50_ms": 16.376854000554886,
+   "p95_ms": 21.092396150379493,
+   "fps": 59.79212522635124,
+   "rss_mb": 1004.671875,
+   "n": 100,
+   "providers": [
+    "torch:mps"
+   ]
+  }
+ ],
+ "falhas": []
+}

@@ -1,0 +1,131 @@
+{
+ "split": "date",
+ "leakage": {
+  "dias_total": 60,
+  "dias_em_mais_de_um_split": 0,
+  "imagens": {
+   "train": 12254,
+   "test": 5255
+  }
+ },
+ "epochs": 6,
+ "seconds": 282.16979789733887,
+ "protocolo": "última época, sem seleção por validação",
+ "test": {
+  "n": 5255,
+  "accuracy": 0.46508087535680304,
+  "macro_f1": 0.3681115380628857,
+  "recall_por_classe": {
+   "Chinee apple": 0.6667,
+   "Lantana": 0.8351,
+   "Parkinsonia": 0.0218,
+   "Parthenium": 0.2669,
+   "Prickly acacia": 0.0,
+   "Rubber vine": 0.3814,
+   "Siam weed": 0.5139,
+   "Snake weed": 0.3347,
+   "Negative": 0.9098
+  },
+  "confusion_matrix(linhas=real,colunas=predito)": [
+   [
+    92,
+    10,
+    0,
+    1,
+    0,
+    2,
+    0,
+    5,
+    28
+   ],
+   [
+    1,
+    81,
+    0,
+    0,
+    0,
+    0,
+    0,
+    4,
+    11
+   ],
+   [
+    0,
+    1,
+    15,
+    1,
+    0,
+    0,
+    0,
+    0,
+    670
+   ],
+   [
+    0,
+    1,
+    0,
+    67,
+    0,
+    0,
+    0,
+    0,
+    183
+   ],
+   [
+    70,
+    2,
+    0,
+    177,
+    0,
+    0,
+    0,
+    9,
+    709
+   ],
+   [
+    96,
+    7,
+    1,
+    0,
+    0,
+    135,
+    0,
+    9,
+    106
+   ],
+   [
+    0,
+    117,
+    0,
+    0,
+    0,
+    3,
+    407,
+    4,
+    261
+   ],
+   [
+    39,
+    33,
+    0,
+    2,
+    0,
+    0,
+    1,
+    84,
+    92
+   ],
+   [
+    15,
+    88,
+    0,
+    15,
+    0,
+    34,
+    1,
+    2,
+    1563
+   ]
+  ]
+ }
+}

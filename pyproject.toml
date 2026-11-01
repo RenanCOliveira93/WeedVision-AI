@@ -1,0 +1,8 @@
+[project]
+name = "weedvision"
+version = "0.1.0"
+description = "WeedVision AI: detecção de plantas daninhas (pesquisa/demo). Sem controle de atuadores."
+requires-python = ">=3.11"
+
+[tool.setuptools]
+packages = ["weedvision"]

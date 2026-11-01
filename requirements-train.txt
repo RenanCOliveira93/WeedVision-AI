@@ -1,0 +1,18 @@
+-r requirements.txt
+# Treino, avaliação e notebooks. ATENÇÃO: ultralytics é AGPL-3.0 (ou licença Enterprise); ver docs/pt-BR/10_licencas.md
+torch==2.15.0
+torchvision==0.29.2
+ultralytics==8.4.194
+onnx==1.23.2
+albumentations==2.0.8
+pycocotools==2.0.11
+pyarrow==26.0.0
+pandas==3.1.0
+matplotlib==3.11.2
+pytest==9.2.0
+httpx==0.28.1
+jupyter==1.1.1
+nbconvert==7.17.2
+nbformat==5.11.1
+ipykernel==7.4.0
+playwright==1.64.1

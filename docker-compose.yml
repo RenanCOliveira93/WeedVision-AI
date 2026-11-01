@@ -1,0 +1,17 @@
+# NÃO EXECUTADO nesta máquina (sem Docker). Pesos, registry e avaliações entram por volume somente leitura.
+services:
+  backend:
+    build: { context: ., dockerfile: infra/Dockerfile.backend }
+    environment: { WEEDVISION_ROOT: /app, CORS_ORIGINS: "http://localhost:8080" }
+    volumes:
+      - ./models:/app/models:ro
+      - ./runs/eval:/app/runs/eval:ro
+      - ./runs/deepweeds:/app/runs/deepweeds:ro
+      - ./runs/benchmark.json:/app/runs/benchmark.json:ro
+      - ./sample_data:/app/sample_data:ro
+    ports: ["8000:8000"]
+    healthcheck: { test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8000/health')"], interval: 15s }
+  frontend:
+    build: { context: ., dockerfile: infra/Dockerfile.frontend }
+    ports: ["8080:80"]
+    depends_on: [backend]
